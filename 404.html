@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+</head>
+<body>
+  <p>Redirecting...</p>
+
+  <script>
+    // Example:
+    // https://SaiDivakar-Navara.github.io/UrlSly/822ef3
+
+    const path = window.location.pathname;
+    const parts = path.split("/");
+
+    // parts = ["", "UrlSly", "822ef3"]
+    const shortCode = parts[2];
+
+    if (shortCode) {
+      window.location.replace(
+        "https://lxhkx04au9.execute-api.us-east-1.amazonaws.com/" + shortCode
+      );
+    } else {
+      document.body.innerHTML = "<h3>Invalid Short URL</h3>";
+    }
+  </script>
+</body>
+</html>
